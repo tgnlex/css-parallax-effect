@@ -1,0 +1,56 @@
+:root {
+--img: url('./my_picture.jpg');
+--base: 0;
+--max: 100%;
+--main: rgba(176, 250, 250, 0.8);
+--big: 250px;
+
+--txt: 1.1rem;
+--lgtxt: 1.5rem;
+}
+html, 
+body {
+  margin: var(--base);
+  padding: var(--base);
+  height: var(--max);
+}
+
+#app { 
+  background-image: var(--img);
+  height: calc(var(--max) * 3); 
+  width: var(--max);
+  margin: var(--base);                                              
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#box {  
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  background: var(--main);
+  margin-top: var(--big);  
+  margin-left: calc(var(--max) / 10);
+  width: calc(var(--max) - 20%);
+  height: calc(var(--big) * 2);
+}
+
+#top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--main)
+}
+#title {  
+  margin-bottom: var(--base);
+  font-size: calc(var(--txt) * 2);
+}
+#tag {
+  font-size: var(--lgtxt);
+  margin-bottom: var(--base);
+}
+#poem {
+font-size: var(--txt);
+}
